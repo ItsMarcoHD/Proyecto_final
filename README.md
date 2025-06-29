@@ -95,4 +95,4 @@ Proyecto_final/
 [https://teclab.uct.cl/~marco.sandoval](https://teclab.uct.cl/~marco.sandoval)
 
 📁 **Repositorio en GitHub:**  
-[https://github.com/NICOXDE123/Proyecto_final.git](https://github.com/NICOXDE123/Proyecto_final.git)
+[https://github.com/ItsMarcoHD/Proyecto_final](https://github.com/ItsMarcoHD/Proyecto_final)
