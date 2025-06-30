@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
             CURLOPT_POSTFIELDS => json_encode($data),
             CURLOPT_COOKIE => 'PHPSESSID=' . session_id(),
-            CURLOPT_TIMEOUT => 15
+            CURLOPT_TIMEOUT => 5
         ]);
 
         $response = curl_exec($ch);

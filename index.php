@@ -90,7 +90,41 @@
 <section class="container mt-5" id="proyectos">
   <h2>Proyectos</h2>
   <p>Aquí se muestran algunos de los trabajos que he realizado. Puedes ver más en el panel de administración.</p>
+
+  <div class="row" id="contenedor-proyectos">
+    <?php
+    $json = @file_get_contents("https://teclab.uct.cl/~marco.sandoval/api/proyectos.php");
+    if ($json === false) {
+        echo "<div class='alert alert-warning'>No se pudieron cargar los proyectos en este momento.</div>";
+    } else {
+        $proyectos = json_decode($json, true);
+        if (is_array($proyectos) && count($proyectos)) {
+            foreach ($proyectos as $proyecto) {
+                $img = $proyecto['imagen'] ? "uploads/" . htmlspecialchars($proyecto['imagen']) : "https://via.placeholder.com/300x200?text=Sin+imagen";
+                echo "<div class='col-md-4 mb-4'>";
+                echo "  <div class='card h-100 shadow-sm'>";
+                echo "    <img src='$img' class='card-img-top' alt='Imagen del proyecto'>";
+                echo "    <div class='card-body'>";
+                echo "      <h5 class='card-title'>" . htmlspecialchars($proyecto['titulo']) . "</h5>";
+                echo "      <p class='card-text'>" . htmlspecialchars($proyecto['descripcion']) . "</p>";
+                if (!empty($proyecto['url_github'])) {
+                    echo "  <a href='" . htmlspecialchars($proyecto['url_github']) . "' target='_blank' class='btn btn-outline-dark btn-sm me-2'>GitHub</a>";
+                }
+                if (!empty($proyecto['url_produccion'])) {
+                    echo "  <a href='" . htmlspecialchars($proyecto['url_produccion']) . "' target='_blank' class='btn btn-outline-primary btn-sm'>Sitio</a>";
+                }
+                echo "    </div>";
+                echo "  </div>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No hay proyectos aún.</p>";
+        }
+    }
+    ?>
+  </div>
 </section>
+
 
 <!-- Contacto -->
 <section class="container mt-5" id="contacto">
