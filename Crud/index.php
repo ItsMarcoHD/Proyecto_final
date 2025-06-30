@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 // Inicializa cURL para obtener la lista de proyectos desde la API
-$ch = curl_init('https://teclab.uct.cl/~marco.sandoval/Proyecto_final/api/proyectos.php/');
+$ch = curl_init('https://teclab.uct.cl/~marco.sandoval/api/proyectos.php/');
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true, // Retorna la respuesta como string
     CURLOPT_TIMEOUT => 5 // ⏱ máximo 5 segundos de espera

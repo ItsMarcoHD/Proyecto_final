@@ -14,7 +14,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 
 $id = intval($_GET['id']); // Convierte el ID recibido a entero
-$api_url = 'https://teclab.uct.cl/~marco.sandoval/Proyecto_final/api/Proyectos.php/' .$id; // URL de la API para obtener el proyecto
+$api_url = 'https://teclab.uct.cl/~marco.sandoval/api/proyectos.php/' .$id; // URL de la API para obtener el proyecto
 $json = @file_get_contents($api_url); // Obtiene los datos del proyecto desde la API
 $p = json_decode($json, true); // Decodifica el JSON recibido
 
