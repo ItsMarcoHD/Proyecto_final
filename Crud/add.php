@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
 
         // URL de la API
-        $ch = curl_init('https://teclab.uct.cl/~marco.sandoval/api/proyectos.php');
+        $ch = curl_init('https://teclab.uct.cl/~marco.sandoval/Proyecto_Final/api/proyectos.php');
 
         curl_setopt_array($ch, [
             CURLOPT_POST => true,
