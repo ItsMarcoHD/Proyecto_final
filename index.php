@@ -45,7 +45,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Mi Nombre</a>
+    <a class="navbar-brand" href="#">Marco Sandoval</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon bg-light"></span>
     </button>
